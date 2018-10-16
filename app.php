@@ -1,6 +1,7 @@
 <?php
 //aqui no hace falta iniciar la sesión porque 
 //este código se carga con require
+
 ?>
 
 <div id ="menu" style="color:white; ">
@@ -28,9 +29,3 @@
     }
 
 </script>
-<?php
-
-
-
-
-

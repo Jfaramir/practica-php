@@ -3,7 +3,7 @@
 session_start();  //inicia la sesión del navegador en el servidor PHP
                   //o la continúa si ya estuviera iniciada
 
-include ('misFunciones.php');
+include ('./misFunciones.php');
 
 function limpiaPalabra($palabra){
     //filtro muy básico para evitar la inyeccion SQL
@@ -26,7 +26,7 @@ $mysqli = conectaBBDD();
 //echo 'Has escrito el usuario: '.$cajaNombre.' y la contraseña: '.$cajaPassword; 
  
  $resultadoQuery = $mysqli -> query("SELECT * FROM usuarios 
-                                WHERE nombreUsuario='$cajaNombre' AND userPass='$cajaPassword' ");
+                                WHERE nombreUsuario='$cajaNombre' AND userPassword='$cajaPassword' ");
  
  $numUsuarios = $resultadoQuery -> num_rows;
  
