@@ -24,6 +24,20 @@ $mysqli = conectaBBDD();
 
  
 //echo 'Has escrito el usuario: '.$cajaNombre.' y la contraseña: '.$cajaPassword; 
+
+// $elHash = '$2y$10$qSrd2WlLMaum7IZENeklFOzqmTYVdzZHWkBSzbjeUiIbuZERQbb0m';
+// 
+// $passwordEncriptada = password_hash($cajaPassword, PASSWORD_BCRYPT);
+// 
+// 
+// //pal loggin
+// 
+// if(password_verify($cajaPassword, $elHash)){
+//     echo 'Contraseña correcta';
+// }
+// else{
+//     echo 'contraseña no valida';
+// }
  
  $resultadoQuery = $mysqli -> query("SELECT * FROM usuarios 
                                 WHERE nombreUsuario='$cajaNombre' AND userPassword='$cajaPassword' ");
@@ -46,5 +60,5 @@ $mysqli = conectaBBDD();
      //muestro una pantalla de error
      require 'error.php';
  }
- 
+// 
  
